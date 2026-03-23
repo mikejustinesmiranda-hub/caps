@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Workbook | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      text-decoration: none;
+      color: #005bea;
+      font-size: 1.2rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 120px;
+      text-align: center; /* Ensures the text is centered in the card */
+      padding: 1rem;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      background: #f0f8ff;
+      color: #003366; /* Change text color when hovering */
+    }
+
+    footer {
+      margin-top: 3rem;
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Quizes</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+</header>
+
+<main>
+  <h1 data-aos="fade-up">Choose a Quiz</h1>
+  <div class="card-grid">
+    <a href="quiz-coc1.html" class="card" data-aos="fade-up" data-aos-delay="100">
+      CoC1 – Install and Configure Computer Systems
+    </a>
+    <a href="quiz-coc2.html" class="card" data-aos="fade-up" data-aos-delay="200">
+      CoC2 – Set Up Computer Networks
+    </a>
+    <a href="quiz-coc3.html" class="card" data-aos="fade-up" data-aos-delay="300">
+      CoC3 – Set Up Computer Servers
+    </a>
+    <a href="quiz-coc4.html" class="card" data-aos="fade-up" data-aos-delay="400">
+      CoC4 – Maintain and Repair Systems and Networks
+    </a>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  document.querySelector('.hamburger')?.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.remove('active');
+    });
+  });
+</script>
+</body>
+</html>

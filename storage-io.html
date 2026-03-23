@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Storage and I/O Devices | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .content p, .content li {
+      text-align: left;
+    }
+
+    .content ul {
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .device-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+
+    .device-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .device-item p {
+      margin: 0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .device-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      .device-item p {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Storage and I/O Devices</h1>
+    <div class="content">
+      <h2>Overview</h2>
+      <p>
+        Storage and input/output (I/O) devices are vital for data handling and communication in a computer system. Storage devices hold data permanently or temporarily, while input devices allow users to send data to the computer, and output devices allow the computer to send data to users.
+      </p>
+
+      <h2>Storage Devices</h2>
+      <ul>
+        <li class="device-item">
+          <img src="images/hdd.jpg" alt="Hard Disk Drive">
+          <p><strong>Hard Disk Drive (HDD):</strong> Uses magnetic storage to store data. Commonly used for OS, games, and bulk data due to affordability and capacity (1TB+).</p>
+        </li>
+        <li class="device-item">
+          <img src="images/ssd.jpg" alt="Solid State Drive">
+          <p><strong>Solid State Drive (SSD):</strong> Provides faster data access and boot times. Available in SATA and NVMe formats. Essential for performance-focused systems.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/optical.jpg" alt="Optical Drive">
+          <p><strong>Optical Drive:</strong> Reads and writes CDs, DVDs, and Blu-rays. Useful for legacy software, media, and archival purposes.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/flash.jpg" alt="USB Flash Drive">
+          <p><strong>USB Flash Drive:</strong> Flash-based removable storage, excellent for portability, backups, and sharing data between systems.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/sdca.jpg" alt="Memory Card">
+          <p><strong>Memory Card:</strong> Small form-factor storage for cameras, smartphones, and embedded systems. Available in SD, microSD, and CF formats.</p>
+        </li>
+      </ul>
+
+      <h2>Input Devices</h2>
+      <ul>
+        <li class="device-item">
+          <img src="images/keyb.jpg" alt="Keyboard">
+          <p><strong>Keyboard:</strong> Primary tool for entering text, commands, and shortcuts into the computer. Comes in wired, wireless, mechanical, and membrane variants.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/mouse.jpg" alt="Mouse">
+          <p><strong>Mouse:</strong> A pointing device that enables navigation, selection, and interaction with GUIs. Available as optical, laser, wired, or wireless.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/scanner.jpg" alt="Scanner">
+          <p><strong>Scanner:</strong> Digitizes physical documents and images. Useful in offices and archival settings for converting paper to digital form.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/webc.jpg" alt="Webcam">
+          <p><strong>Webcam:</strong> Captures video for communication (Zoom, Teams) or streaming. Often integrated in laptops.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/mic.jpg" alt="Microphone">
+          <p><strong>Microphone:</strong> Captures audio. Used for voice recognition, recording, and online communication.</p>
+        </li>
+      </ul>
+
+      <h2>Output Devices</h2>
+      <ul>
+        <li class="device-item">
+          <img src="images/moni.jpg" alt="Monitor">
+          <p><strong>Monitor:</strong> Displays the graphical interface. Comes in LCD, LED, OLED types and various resolutions (1080p, 4K, etc.).</p>
+        </li>
+        <li class="device-item">
+          <img src="images/printer.jpg" alt="Printer">
+          <p><strong>Printer:</strong> Converts digital documents into paper format. Includes inkjet, laser, and 3D printers.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/speaker.jpg" alt="Speakers">
+          <p><strong>Speakers:</strong> Output sound. Used for music, system alerts, videos, and conferencing.</p>
+        </li>
+        <li class="device-item">
+          <img src="images/proj.jpg" alt="Projector">
+          <p><strong>Projector:</strong> Displays computer output on large screens. Ideal for classrooms, presentations, and meetings.</p>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

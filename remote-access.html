@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enable Remote Desktop Services | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Enable Remote Desktop Services</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>What is Remote Desktop Services (RDS)?</h3>
+    <p>Remote Desktop Services allow users to remotely access a Windows server or workstation from another location using the Remote Desktop Protocol (RDP). It’s commonly used in enterprise environments for remote administration, virtual desktops, and centralized app hosting.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Enable Remote Desktop on a Server</h3>
+    <ul>
+      <li>Open <strong>Server Manager</strong>.</li>
+      <li>Click <strong>Local Server</strong> in the left pane.</li>
+      <li>Find <strong>Remote Desktop</strong> and click the status (usually “Disabled”).</li>
+      <li>Select <strong>Allow remote connections to this computer</strong>.</li>
+      <li>Optionally, check <strong>Allow connections only from computers running Remote Desktop with Network Level Authentication</strong> for better security.</li>
+      <li>Click <strong>OK</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Configure Firewall Rules</h3>
+    <ul>
+      <li>Go to <strong>Control Panel &gt; System and Security &gt; Windows Defender Firewall</strong>.</li>
+      <li>Click <strong>Allow an app or feature through Windows Defender Firewall</strong>.</li>
+      <li>Ensure <strong>Remote Desktop</strong> is allowed on <strong>Domain</strong>, <strong>Private</strong>, and <strong>Public</strong> networks if needed.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Add Users to Remote Desktop Group</h3>
+    <ul>
+      <li>Right-click <strong>This PC</strong> &gt; <strong>Properties</strong>.</li>
+      <li>Click <strong>Remote Settings</strong> &gt; <strong>Select Users</strong>.</li>
+      <li>Click <strong>Add</strong> and enter the usernames of those who should have RDP access.</li>
+    </ul>
+    <p><strong>Note:</strong> Administrators already have access by default.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Install Remote Desktop Services Role (Optional)</h3>
+    <ul>
+      <li>In Server Manager, go to <strong>Manage &gt; Add Roles and Features</strong>.</li>
+      <li>Choose <strong>Remote Desktop Services installation</strong>.</li>
+      <li>Select deployment type (Quick Start or Standard).</li>
+      <li>Choose role services like <strong>RD Session Host</strong>, <strong>RD Licensing</strong>, or <strong>RD Connection Broker</strong> depending on needs.</li>
+    </ul>
+    <p>This is used for centralized remote session management or virtual desktop infrastructure (VDI).</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Connect Using Remote Desktop Client</h3>
+    <ul>
+      <li>On the client computer, open <strong>Remote Desktop Connection</strong> (search <code>mstsc</code>).</li>
+      <li>Enter the server's IP address or hostname.</li>
+      <li>Click <strong>Connect</strong>, then log in with a valid user account.</li>
+    </ul>
+    <p>Ensure the server is powered on and reachable over the network.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Use strong passwords and consider multi-factor authentication (MFA).</li>
+      <li>Keep Windows and Remote Desktop Services updated.</li>
+      <li>Enable auditing to monitor RDP login attempts.</li>
+      <li>Limit RDP access via firewall or VPN to trusted IP ranges.</li>
+      <li>Consider using RDS Gateway for added security over the internet.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

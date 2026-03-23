@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoC1 Quiz | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f7fd;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .question {
+      background: white;
+      border-radius: 10px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .question h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .question label {
+      display: block;
+      margin: 0.3rem 0;
+    }
+
+    .question input[type="radio"] {
+      margin-right: 0.5rem;
+    }
+
+    .answer {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #2eb2d6;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .incorrect {
+      color: red;
+    }
+
+    .explanation {
+      display: none;
+      margin-top: 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-left: 5px solid #2eb2d6;
+    }
+
+    #submit-btn {
+    background: linear-gradient(to right, #1f74e4, #005bea); /* Soft blue gradient */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 2rem auto 0;
+    transition: transform 0.2s, background-color 0.3s ease-in-out;
+  }
+
+  #submit-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #0277bd, #003c8f); 
+  }
+
+  #reset-btn {
+    background: linear-gradient(to right, #e74c3c, #c0392b); 
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+    transition: transform 0.2s, background-color 0.3s ease-in-out;
+  }
+
+  #reset-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to right, #c0392b, #992d22); 
+  }
+
+  #submit-btn, #reset-btn {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+    #results {
+      margin-top: 2rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #003366;
+      color: white;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+          <img src="images/background.png" alt="IC-iT Logo">
+          <span>IC-iT</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="activities.html">Lessons</a></li>
+          <li><a href="workbooks.html">Workbook</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+        </ul>
+      </nav>
+
+<main>
+  <h2>Quiz: CoC1 – Install and Configure Computer Systems</h2>
+
+  <form id="quiz-form">
+    <div class="question" data-answer="c" data-explanation="Delete is the key to enter the BIOS-SETUP">
+      <h3>1. Which is the proper key to enter the BIOS?</h3>
+      <label><input type="radio" name="q1" value="a" />Space bar</label>
+      <label><input type="radio" name="q1" value="b" />Shift key</label>
+      <label><input type="radio" name="q1" value="c" />Del</label>
+      <label><input type="radio" name="q1" value="d" />F5</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="c" data-explanation="HDD (Hard Disk Drive) is a type of storage device, while others like CPU or GPU perform different functions.">
+      <h3>2. Which of the following is a type of storage device?</h3>
+      <label><input type="radio" name="q2" value="a" />CPU</label>
+      <label><input type="radio" name="q2" value="b" />RAM</label>
+      <label><input type="radio" name="q2" value="c" />HDD</label>
+      <label><input type="radio" name="q2" value="d" />GPU</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="c" data-explanation="BIOS stands for Basic Input Output System, which is essential for booting the system.">
+      <h3>3. What does BIOS stand for?</h3>
+      <label><input type="radio" name="q3" value="a" />Basic Internal Output System</label>
+      <label><input type="radio" name="q3" value="b" />Binary Input Output System</label>
+      <label><input type="radio" name="q3" value="c" />Basic Input Output System</label>
+      <label><input type="radio" name="q3" value="d" />Boot Input Operating System</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="a" data-explanation="A Router is a network device that forwards data packets between different computer networks, it connects multiple networks together.">
+      <h3>4. What is the network device that forwards packets across different computer network?</h3>
+      <label><input type="radio" name="q4" value="a" />Router</label>
+      <label><input type="radio" name="q4" value="b" />Hub</label>
+      <label><input type="radio" name="q4" value="c" />LAN card</label>
+      <label><input type="radio" name="q4" value="d" />Switch</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="b" data-explanation="A LAN tester is used to check if a network cable is properly connected and if the wires have correct continuity">
+      <h3>5. Which tool is used to test the continuity of a cable</h3>
+      <label><input type="radio" name="q5" value="a" />Crimping yool</label>
+      <label><input type="radio" name="q5" value="b" />LAN tester</label>
+      <label><input type="radio" name="q5" value="c" />Screwdriver</label>
+      <label><input type="radio" name="q5" value="d" />Flashdrive</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="c" data-explanation="The Ipconfig command displays the IP address and other network information of a computer">
+      <h3>6. What command is used to check the IP address of a computer?</h3>
+      <label><input type="radio" name="q6" value="a" />Format</label>
+      <label><input type="radio" name="q6" value="b" />Netstat</label>
+      <label><input type="radio" name="q6" value="c" />Ipconfig</label>
+      <label><input type="radio" name="q6" value="d" />Ping</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="b" data-explanation="RAM is used for temporary data processing and is essential for the computer's speed and efficiency.">
+      <h3>7. What is the role of RAM in a computer?</h3>
+      <label><input type="radio" name="q7" value="a" />Long-term storage</label>
+      <label><input type="radio" name="q7" value="b" />Temporary data processing</label>
+      <label><input type="radio" name="q7" value="c" />Power supply</label>
+      <label><input type="radio" name="q7" value="d" />Displays video</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="a" data-explanation="Crimping tool is used to attach RJ45 connector to a UTP cable when making network cables.">
+      <h3>8. What tool is used to attach an RJ45 connector to a UTP cable?</h3>
+      <label><input type="radio" name="q8" value="a" />Crimping tool</label>
+      <label><input type="radio" name="q8" value="b" />Wire Stripper</label>
+      <label><input type="radio" name="q8" value="c" />LAN tester</label>
+      <label><input type="radio" name="q8" value="d" />Punch down tool</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="c" data-explanation="Always check NETWORK CABLE CONNECTION to make sure it is properly connected.">
+      <h3>9. What should be checked first if there is no internet connection? </h3>
+      <label><input type="radio" name="q9" value="a" />Monitor</label>
+      <label><input type="radio" name="q9" value="b" />Power cable</label>
+      <label><input type="radio" name="q9" value="c" />Network cable connection</label>
+      <label><input type="radio" name="q9" value="d" />Keyboard</label>
+      <div class="explanation"></div>
+    </div>
+
+    <div class="question" data-answer="d" data-explanation="Windows is an OPERATING SYSTEM that manages hardware and software resourses.">
+      <h3>10. Which operating system is commonly installed in computer?</h3>
+      <label><input type="radio" name="q10" value="a" />BIOS</label>
+      <label><input type="radio" name="q10" value="b" />Microsoft word</label>
+      <label><input type="radio" name="q10" value="c" />Google chrome</label>
+      <label><input type="radio" name="q10" value="d" />Windows</label>
+      <div class="explanation"></div>
+    </div>
+
+    <button id="submit-btn" type="button">Submit Quiz</button>
+    <button id="reset-btn" type="button">Reset Quiz</button>
+    <div id="results"></div>
+  </form>
+</main>
+
+<footer>
+  <p>&copy; 2026 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script>
+// SUBMIT BUTTON
+document.getElementById("submit-btn").addEventListener("click", () => {
+  let correct = 0;
+  const total = 10;
+  const passingScore = 75;
+
+  document.querySelectorAll(".question").forEach((q, index) => {
+    const inputName = "q" + (index + 1);
+    const correctAnswer = q.dataset.answer;
+    const selected = document.querySelector(`input[name="${inputName}"]:checked`);
+    const explanation = q.querySelector(".explanation");
+
+    q.classList.remove("correct", "incorrect");
+
+    if (!selected) {
+      return;
+    }
+
+    explanation.textContent = q.dataset.explanation;
+    explanation.style.display = "block";
+
+    if (selected.value === correctAnswer) {
+      correct++;
+      q.classList.add("correct");
+    } else {
+      q.classList.add("incorrect");
+    }
+
+    const correctOption = q.querySelector(`input[value="${correctAnswer}"]`);
+    if (correctOption) {
+      correctOption.parentElement.style.color = "green";
+    }
+  });
+
+  const percentage = ((correct / total) * 100).toFixed(2);
+
+  let statusMessage = "";
+  if (percentage >= passingScore) {
+    statusMessage = "🎉 PASSED!";
+  } else {
+    statusMessage = "❌ FAILED!";
+  }
+
+  document.getElementById("results").innerHTML =
+    `You got ${correct} out of ${total} correct.<br>
+     Score: ${percentage}%<br>
+     <strong>${statusMessage}</strong>`;
+
+  document.getElementById("submit-btn").disabled = true;
+});
+
+
+// RESET BUTTON
+document.getElementById("reset-btn").addEventListener("click", () => {
+
+  // Reset radio buttons
+  document.getElementById("quiz-form").reset();
+
+  // Reset each question
+  document.querySelectorAll(".question").forEach((q) => {
+    q.classList.remove("correct", "incorrect");
+
+    const explanation = q.querySelector(".explanation");
+    explanation.style.display = "none";
+    explanation.textContent = "";
+
+    q.querySelectorAll("label").forEach(label => {
+      label.style.color = "";
+    });
+  });
+
+  // Clear results
+  document.getElementById("results").innerHTML = "";
+
+  // Enable submit button again
+  document.getElementById("submit-btn").disabled = false;
+});
+</script>
+
+</body>
+</html>

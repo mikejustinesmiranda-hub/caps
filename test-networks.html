@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inspect and Test Configured Networks | IC-iT Portal</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      will-change: transform, opacity;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul {
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Inspect and Test Configured Networks</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>Verify IP Configuration</h3>
+    <p>Use <code>ipconfig</code> (Windows) or <code>ifconfig</code>/<code>ip a</code> (Linux) to inspect the IP settings. Check if the IP address, subnet mask, default gateway, and DNS servers are correctly configured.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Ping Test</h3>
+    <p>Use <code>ping</code> to test reachability:</p>
+    <ul>
+      <li><code>ping 127.0.0.1</code> – Loopback (to verify TCP/IP stack)</li>
+      <li><code>ping default gateway</code> – Check router connection</li>
+      <li><code>ping 8.8.8.8</code> – Check external internet access</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Check Network Devices</h3>
+    <p>Use <code>arp -a</code> to see a list of devices the PC has communicated with. Use network scanners (e.g., Angry IP Scanner) to discover devices on the network.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>DNS Resolution Test</h3>
+    <p>Use <code>nslookup</code> or <code>dig</code> to check if domain names are resolving to IPs correctly. This helps isolate DNS issues from general connectivity problems.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Trace Route and Path Testing</h3>
+    <p>Use <code>tracert</code> (Windows) or <code>traceroute</code> (Linux/Mac) to view the path packets take to a remote server. Identify where delays or packet loss occur.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Loopback Test</h3>
+    <p>Ping <code>127.0.0.1</code> to check if your network adapter and TCP/IP protocol are functioning properly. If this fails, there is a software issue on your machine.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <h3>Firewall & Antivirus Interference</h3>
+    <p>Sometimes, overprotective firewall or antivirus settings block valid network traffic. Temporarily disable them to test connectivity issues — but always re-enable after testing.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="700">
+    <h3>Physical Connection Check</h3>
+    <p>Ensure all cables are connected firmly. For Wi-Fi, verify signal strength and that the device is on the correct network. Check router and switch LEDs to confirm proper activity.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="800">
+    <h3>Internet Speed Test</h3>
+    <p>Use tools like <a href="https://speedtest.net" target="_blank">Speedtest.net</a> to check current upload/download speeds and confirm ISP performance matches expectations.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="900">
+    <h3>Basic Troubleshooting Workflow</h3>
+    <ul>
+      <li>1️⃣ Check physical connections</li>
+      <li>2️⃣ Use <code>ipconfig</code>/<code>ping</code> to test local and internet reachability</li>
+      <li>3️⃣ Test DNS with <code>nslookup</code></li>
+      <li>4️⃣ Use <code>tracert</code> or <code>pathping</code> to isolate path issues</li>
+      <li>5️⃣ Disable firewall temporarily if nothing else works</li>
+    </ul>
+    <p>Follow this order to quickly isolate whether a problem is with your device, the network, DNS, or the internet connection itself.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

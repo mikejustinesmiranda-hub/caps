@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document Maintenance and Repairs | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 42px;
+    }
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #005bea;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #003366;
+      color: white;
+      margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Document Maintenance and Repairs</h1>
+
+    <section data-aos="fade-up">
+      <h2>Why Document Maintenance Matters</h2>
+      <p>Maintaining accurate and up-to-date documentation is essential for ensuring consistent system operation, supporting future repairs, and meeting compliance standards. Good documentation helps technicians troubleshoot issues, train new staff, and reduce downtime.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>Types of Documentation</h2>
+      <ul>
+        <li><strong>System Configuration Documents:</strong> Details on software, hardware, and network settings.</li>
+        <li><strong>Repair Logs:</strong> A record of past issues and their resolutions.</li>
+        <li><strong>Maintenance Schedules:</strong> Lists of tasks and timelines for preventive maintenance.</li>
+        <li><strong>Inventory Records:</strong> Tracks equipment, serial numbers, and warranty information.</li>
+        <li><strong>User Manuals:</strong> Vendor-provided guides for operation and troubleshooting.</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="200">
+      <h2>Best Practices for Maintenance Documentation</h2>
+      <ol>
+        <li>Use standardized templates for consistency.</li>
+        <li>Include date, technician name, and specific actions taken.</li>
+        <li>Keep digital backups of physical documents.</li>
+        <li>Store documents securely but ensure they are easily accessible.</li>
+        <li>Update documents immediately after changes or repairs.</li>
+      </ol>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Recording Repairs</h2>
+      <p>When repairs are performed, it's essential to capture all relevant information to aid in future diagnostics and to identify recurring problems. A typical repair entry should include:</p>
+      <ul>
+        <li>Description of the issue</li>
+        <li>Steps taken to resolve it</li>
+        <li>Parts replaced or software updated</li>
+        <li>Time taken and final status</li>
+        <li>Recommendations for prevention</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="400">
+      <h2>Tools for Documentation</h2>
+      <ul>
+        <li>Spreadsheets (e.g., Excel, Google Sheets)</li>
+        <li>Helpdesk or ticketing systems (e.g., Zendesk, Freshdesk)</li>
+        <li>Asset management tools (e.g., GLPI, Lansweeper)</li>
+        <li>Cloud documentation platforms (e.g., Notion, Confluence)</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="500">
+      <h2>Benefits of Thorough Documentation</h2>
+      <ul>
+        <li>Faster troubleshooting and reduced downtime</li>
+        <li>Improved communication between technicians</li>
+        <li>Historical reference for recurring issues</li>
+        <li>Compliance with regulatory and warranty requirements</li>
+        <li>Better planning for upgrades and replacements</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="600">
+      <h2>Conclusion</h2>
+      <p>Effective documentation of maintenance and repairs is an often-overlooked but critical aspect of IT operations. By following consistent documentation practices, organizations can minimize disruption, save time, and ensure a reliable record of system health and intervention history.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

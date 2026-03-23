@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clean Internal and External Components | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #005bea;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #003366;
+      color: white;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    .hamburger { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Clean Internal and External Components</h1>
+
+    <section data-aos="fade-up">
+      <h2>Importance of Cleaning Components</h2>
+      <p>Over time, dust and debris can accumulate in and around computer components, reducing airflow, causing overheating, and potentially damaging the hardware. Regular cleaning ensures longevity, better performance, and reduces the risk of system failure.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>Tools and Materials Required</h2>
+      <ul>
+        <li>Anti-static wrist strap</li>
+        <li>Soft lint-free cloths</li>
+        <li>Isopropyl alcohol (90% or higher)</li>
+        <li>Compressed air canister</li>
+        <li>Small brushes (nylon or antistatic)</li>
+        <li>Vacuum cleaner (with low suction, optional)</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="200">
+      <h2>Cleaning Internal Components</h2>
+      <ol>
+        <li>Shut down and unplug the computer from the power source.</li>
+        <li>Wear an anti-static wrist strap to prevent electrostatic discharge.</li>
+        <li>Remove the case cover carefully.</li>
+        <li>Use compressed air to blow dust off fans, heat sinks, motherboard, and PSU vents. Hold fans in place to prevent spinning.</li>
+        <li>Use brushes for stubborn dust in tight areas.</li>
+        <li>Wipe down internal surfaces with a cloth lightly dampened with isopropyl alcohol.</li>
+        <li>Reassemble the case and power on the system.</li>
+      </ol>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Cleaning External Components</h2>
+      <ul>
+        <li><strong>Monitor:</strong> Use a microfiber cloth and screen-safe cleaner. Avoid spraying directly on the screen.</li>
+        <li><strong>Keyboard:</strong> Shake gently to remove debris, clean with compressed air, and wipe with alcohol-based wipes.</li>
+        <li><strong>Mouse:</strong> Wipe the surface and clean the sensor lens with a cotton swab.</li>
+        <li><strong>Computer Case:</strong> Wipe the exterior with a cloth. Clean vents and ports with compressed air.</li>
+        <li><strong>Cables:</strong> Wipe down to remove grime and dust.</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="400">
+      <h2>Precautions to Take</h2>
+      <ul>
+        <li>Never clean a running or plugged-in device.</li>
+        <li>Avoid using water or household cleaners on components.</li>
+        <li>Always allow alcohol to evaporate before turning the system back on.</li>
+        <li>Do not touch sensitive circuitry or connector pins.</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="500">
+      <h2>Recommended Cleaning Schedule</h2>
+      <ul>
+        <li><strong>Monthly:</strong> Wipe down external peripherals and monitor.</li>
+        <li><strong>Every 3-6 months:</strong> Clean internal components and case vents.</li>
+        <li><strong>Annually:</strong> Perform a full internal and external cleaning including fans, heat sinks, and PSU.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

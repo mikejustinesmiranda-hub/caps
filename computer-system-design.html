@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer System Design | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
+      margin-bottom: 1rem;
+      list-style-type: disc;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Computer System Design</h1>
+    <section class="content">
+      <h2>Introduction</h2>
+      <p>
+        Computer System Design involves planning the layout, selection, and configuration of components in a computer setup to meet specific performance and budget needs. This includes evaluating software requirements, selecting hardware accordingly, and ensuring compatibility between all components.
+      </p>
+
+      <h2>Key Design Considerations</h2>
+      <ul>
+        <li><strong>Performance Needs:</strong> Define tasks (e.g., gaming, office work, programming) and match with suitable components.</li>
+        <li><strong>Budget:</strong> Optimize hardware selection for cost-effectiveness.</li>
+        <li><strong>Component Compatibility:</strong> Ensure parts work together (CPU and motherboard socket, RAM type, etc.).</li>
+        <li><strong>Expandability:</strong> Plan for future upgrades such as extra RAM, storage, or a GPU.</li>
+        <li><strong>Form Factor:</strong> Choose appropriate case size and motherboard layout.</li>
+      </ul>
+
+      <h2>System Design Workflow</h2>
+      <p>
+        Designing a computer system typically follows this workflow:
+      </p>
+      <ul>
+        <li>Determine user needs and usage scenarios</li>
+        <li>Select hardware components that meet those needs</li>
+        <li>Verify compatibility and budget alignment</li>
+        <li>Prepare for assembly and installation</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

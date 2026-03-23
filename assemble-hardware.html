@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assemble Computer Hardware | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #eef3f9;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Assemble Computer Hardware</h1>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>
+        Assembling computer hardware involves combining all essential components of a computer into one unit to create a functional system. It requires attention to detail, patience, and proper handling to ensure that all parts work efficiently together. Understanding the purpose of each component helps in achieving better performance and future upgrades.
+      </p>
+
+      <h2>Tools Required</h2>
+      <ul>
+        <li>Philips-head screwdriver</li>
+        <li>Anti-static wrist strap or grounding pad</li>
+        <li>Thermal paste (if not pre-applied on CPU cooler)</li>
+        <li>Flashlight (optional, for better visibility)</li>
+        <li>Cable ties (for managing cables neatly)</li>
+      </ul>
+
+      <h2>Steps to Assemble a Computer</h2>
+      <ul>
+        <li><strong>Prepare the Work Area:</strong> Use a static-free surface, organize your tools, and lay out all components.</li>
+        <li><strong>Install the CPU:</strong> Align the processor’s golden triangle with the socket and gently lock it in place.</li>
+        <li><strong>Apply Thermal Paste & Install CPU Cooler:</strong> If needed, apply a small pea-sized amount and secure the cooler.</li>
+        <li><strong>Install RAM:</strong> Insert memory modules into their respective DIMM slots, pressing until they click into place.</li>
+        <li><strong>Mount the Motherboard:</strong> Use standoffs to prevent contact with the case and screw it in securely.</li>
+        <li><strong>Install Storage Drives:</strong> Mount HDD/SSD into drive bays or M.2 slots and connect SATA/power cables.</li>
+        <li><strong>Install Power Supply Unit (PSU):</strong> Align PSU in the case, screw it in, and route cables cleanly.</li>
+        <li><strong>Install Graphics Card (GPU):</strong> Insert into the PCIe x16 slot and connect power connectors if needed.</li>
+        <li><strong>Connect Front Panel Headers:</strong> Carefully attach power switch, reset button, LED indicators, USB, and audio jacks.</li>
+        <li><strong>Double Check All Connections:</strong> Inspect all connections—power, data, fans, and front I/O—for completeness and security.</li>
+        <li><strong>Boot and Test:</strong> Turn on the system. If it beeps or lights up, enter BIOS to check component detection.</li>
+      </ul>
+
+      <h2>Tips and Reminders</h2>
+      <ul>
+        <li>Always ground yourself before handling sensitive parts to avoid electrostatic discharge (ESD).</li>
+        <li>Install components in a logical order to avoid obstruction (e.g., CPU before motherboard installation).</li>
+        <li>Keep screws organized to prevent losing or misplacing small parts.</li>
+        <li>Keep all product manuals nearby for reference.</li>
+      </ul>
+
+      <h2>Common Issues & Troubleshooting</h2>
+      <ul>
+        <li><strong>No Display on Boot:</strong> Check GPU seating, monitor connection, and BIOS beep codes.</li>
+        <li><strong>System Not Powering On:</strong> Recheck 24-pin and CPU 8-pin power connectors.</li>
+        <li><strong>Overheating:</strong> Ensure CPU cooler is mounted correctly and fans are spinning.</li>
+        <li><strong>RAM Not Detected:</strong> Try reseating RAM or using one stick at a time.</li>
+      </ul>
+
+      <h2>Post-Assembly Setup</h2>
+      <ul>
+        <li>Enter BIOS to set boot priority and verify all hardware is detected.</li>
+        <li>Install an operating system via USB or optical media.</li>
+        <li>Update drivers for chipset, GPU, and other peripherals.</li>
+        <li>Test performance using tools like CPU-Z, HWMonitor, and UserBenchmark.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

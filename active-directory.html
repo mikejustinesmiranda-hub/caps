@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Set Up Active Directory | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger { display: none; }
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Set Up Active Directory Domain Services (AD DS)</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>What is Active Directory?</h3>
+    <p>Active Directory (AD) is a directory service developed by Microsoft for Windows domain networks. It stores information about objects on the network and makes this information easy for administrators and users to find and use. AD DS (Domain Services) allows centralized management of users, computers, and other resources.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Step 1: Install the AD DS Role</h3>
+    <p>1. Open <strong>Server Manager</strong>.<br>
+       2. Click on <strong>Manage</strong> &gt; <strong>Add Roles and Features</strong>.<br>
+       3. Use the wizard to select <strong>Role-based or feature-based installation</strong>.<br>
+       4. Choose your local server and then select <strong>Active Directory Domain Services</strong>.<br>
+       5. Click <strong>Next</strong> and then <strong>Install</strong>.</p>
+    <p><em>Tip:</em> Do not close the wizard until the installation is complete.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Step 2: Promote Server to a Domain Controller</h3>
+    <p>After the role is installed, a yellow notification flag will appear at the top of Server Manager. Click it and choose <strong>Promote this server to a domain controller</strong>.</p>
+    <ul>
+      <li>To start a new network, choose <strong>Add a new forest</strong>.</li>
+      <li>Provide a root domain name (e.g., <code>mycompany.local</code>).</li>
+      <li>Set a secure <strong>Directory Services Restore Mode (DSRM)</strong> password.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Step 3: Review & Complete Setup</h3>
+    <p>The wizard checks for prerequisites and displays a summary of configurations. Click <strong>Install</strong> to begin promotion. Your server will reboot after setup is complete.</p>
+    <p><strong>Note:</strong> You must be logged in as a local administrator to promote the server.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Step 4: Verify Domain Controller Status</h3>
+    <ul>
+      <li>Open <strong>Active Directory Users and Computers</strong> to manage objects.</li>
+      <li>Check <strong>DNS Manager</strong> for correct domain zone creation.</li>
+      <li>Use <code>dcdiag</code> in Command Prompt to check domain health:</li>
+    </ul>
+    <pre><code>dcdiag /v</code></pre>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Step 5: Organize Your Directory</h3>
+    <p>Use Organizational Units (OUs) to keep users and computers organized.</p>
+    <ul>
+      <li>Create OUs by department or function (e.g., HR, IT, Sales).</li>
+      <li>Move objects into their appropriate OU for easier management.</li>
+      <li>Use Group Policy Objects (GPOs) to enforce security settings.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <h3>Step 6: Best Practices for AD Management</h3>
+    <ul>
+      <li>Keep at least two domain controllers for redundancy.</li>
+      <li>Regularly back up the system state for recovery.</li>
+      <li>Limit admin access and enforce password policies.</li>
+      <li>Monitor logs in <code>Event Viewer</code> for unusual activity.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

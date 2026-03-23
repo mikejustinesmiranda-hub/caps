@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bootable Media | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
+      margin-bottom: 1rem;
+    }
+
+    .media-type {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .media-type img {
+      width: 150px;
+      height: 150px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .media-type p {
+      flex: 1;
+      margin: 0;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .media-type {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .media-type img {
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <button class="hamburger" aria-label="Toggle navigation">&#9776;</button>
+  </nav>
+
+  <main>
+    <h1>Bootable Media</h1>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>
+        Bootable media refers to any storage device—such as a USB flash drive, DVD, CD, or external hard drive—that contains the necessary files to start or "boot" a computer. It is essential for installing new operating systems, recovering systems that fail to boot, and troubleshooting hardware or software issues.
+      </p>
+
+      <h2>How Does Bootable Media Work?</h2>
+      <p>
+        When you power on a computer, the BIOS or UEFI firmware checks for a bootable device. If bootable media is inserted and properly configured, the system loads the files from that media instead of the internal hard drive. This is often controlled by the <strong>boot order</strong> set in BIOS/UEFI settings.
+      </p>
+
+      <h2>Uses of Bootable Media</h2>
+      <ul>
+        <li><strong>Installing Operating Systems:</strong> Bootable media allows clean installation of Windows, Linux, or macOS.</li>
+        <li><strong>System Recovery:</strong> Provides access to recovery environments to fix errors like corrupted bootloaders or broken file systems.</li>
+        <li><strong>Running Live Systems:</strong> Linux distributions like Ubuntu can be run directly from USBs without installation.</li>
+        <li><strong>Secure Erase and Partitioning:</strong> Tools like GParted can be booted to manage drives securely.</li>
+        <li><strong>Virus/Malware Removal:</strong> Bootable antivirus scanners like Kaspersky Rescue Disk can clean infected systems without OS interference.</li>
+      </ul>
+
+      <h2>Common Types of Bootable Media</h2>
+      <div class="media-type">
+        <img src="images/flash.jpg" alt="USB Flash Drive used for booting operating systems">
+        <p><strong>USB Flash Drive:</strong> The most popular bootable medium today due to speed, size, and reusability.</p>
+      </div>
+      <div class="media-type">
+        <img src="images/dvd.jpg" alt="DVD or CD for bootable media">
+        <p><strong>DVD/CD:</strong> Less commonly used now but still important for older systems or BIOS-only devices.</p>
+      </div>
+      <div class="media-type">
+        <img src="images/external.jpg" alt="External Hard Drive as bootable media">
+        <p><strong>External Hard Drive:</strong> Larger capacity allows multiple OSes or tools to be stored and booted.</p>
+      </div>
+
+      <h2>Creating Bootable Media</h2>
+      <ul>
+        <li><strong>Windows Tools:</strong> <em>Rufus</em>, <em>Windows Media Creation Tool</em></li>
+        <li><strong>Linux Tools:</strong> <em>balenaEtcher</em>, <em>UNetbootin</em>, <em>dd</em> command</li>
+        <li><strong>macOS Tools:</strong> Terminal-based <code>createinstallmedia</code> command or Disk Utility</li>
+      </ul>
+
+      <h2>Boot Modes: BIOS vs UEFI</h2>
+      <ul>
+        <li><strong>BIOS (Basic Input/Output System):</strong> The traditional firmware interface used before 2010s. Limited to MBR partitions.</li>
+        <li><strong>UEFI (Unified Extensible Firmware Interface):</strong> Modern replacement with graphical interface, faster boot times, and GPT support.</li>
+        <li>Some bootable tools must match the correct boot mode for compatibility.</li>
+      </ul>
+
+      <h2>Bootloaders</h2>
+      <ul>
+        <li><strong>GRUB (GRand Unified Bootloader):</strong> Common in Linux; allows dual-boot setups.</li>
+        <li><strong>Windows Boot Manager:</strong> Used in Windows systems for selecting recovery or OS options.</li>
+      </ul>
+
+      <h2>Security Considerations</h2>
+      <ul>
+        <li><strong>Secure Boot:</strong> UEFI option that blocks unauthorized bootable media unless signed with a trusted certificate.</li>
+        <li><strong>Write Protection:</strong> Prevents malware from modifying the boot media while plugged in.</li>
+        <li><strong>Checksum Verification:</strong> Always verify bootable ISO files using MD5 or SHA256 to ensure integrity.</li>
+      </ul>
+
+      <h2>Real-World Applications</h2>
+      <ul>
+        <li><strong>IT Support:</strong> Technicians use bootable drives to fix broken systems or wipe hard drives.</li>
+        <li><strong>Education:</strong> Schools use live Linux USBs for safe and cost-effective computer labs.</li>
+        <li><strong>Cybersecurity:</strong> Ethical hackers and forensic analysts boot into secure environments for testing or evidence gathering.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

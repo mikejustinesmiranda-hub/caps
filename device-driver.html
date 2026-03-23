@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Driver | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Device Driver</h1>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>
+        A device driver is a specific type of software that allows higher-level computer programs to communicate with hardware devices. It acts as a translator between the operating system and the hardware, ensuring that commands are accurately delivered and executed.
+      </p>
+
+      <h2>Purpose of Device Drivers</h2>
+      <ul>
+        <li><strong>Hardware Communication:</strong> Enables the OS to send instructions to hardware like printers, keyboards, mice, and monitors.</li>
+        <li><strong>Hardware Control:</strong> Manages how hardware responds to software requests.</li>
+        <li><strong>Customization:</strong> Adjusts generic OS operations to the specific features of a particular hardware model.</li>
+      </ul>
+
+      <h2>Types of Device Drivers</h2>
+      <ul>
+        <li><strong>Kernel-mode Drivers:</strong> Run in the operating system kernel and have unrestricted access to hardware, offering fast performance but lower fault tolerance.</li>
+        <li><strong>User-mode Drivers:</strong> Operate outside the kernel in user space, increasing system stability by reducing the risk of crashes.</li>
+        <li><strong>Virtual Device Drivers:</strong> Simulate physical hardware devices for software environments, useful in virtual machines and emulators.</li>
+      </ul>
+
+      <h2>Common Examples</h2>
+      <ul>
+        <li><strong>Graphics Drivers:</strong> Interface between your GPU and applications, critical for gaming and visual performance.</li>
+        <li><strong>Network Drivers:</strong> Facilitate data transmission through Ethernet or Wi-Fi devices.</li>
+        <li><strong>Sound Drivers:</strong> Allow audio playback and recording on your device.</li>
+        <li><strong>Printer Drivers:</strong> Convert print requests into a format your specific printer model can understand.</li>
+      </ul>
+
+      <h2>Installing and Updating Drivers</h2>
+      <ul>
+        <li><strong>Automatic Installation:</strong> Modern OSes like Windows can auto-detect and install basic drivers during system setup.</li>
+        <li><strong>Manual Installation:</strong> Required for certain devices where manufacturer-specific features are needed.</li>
+        <li><strong>Updating Drivers:</strong> Keeps the system running efficiently and fixes bugs or security vulnerabilities. Use Windows Update, Device Manager, or tools from the manufacturer.</li>
+      </ul>
+
+      <h2>Challenges and Issues</h2>
+      <ul>
+        <li><strong>Compatibility:</strong> A driver must match the device and operating system version.</li>
+        <li><strong>Corruption or Failure:</strong> Outdated or broken drivers can cause crashes, malfunctions, or blue screens.</li>
+        <li><strong>Security Vulnerabilities:</strong> Poorly maintained drivers can be exploited by malware for system access.</li>
+      </ul>
+
+      <h2>Real-World Applications</h2>
+      <ul>
+        <li><strong>IT Support:</strong> Diagnosing driver issues is a common troubleshooting step for malfunctioning hardware.</li>
+        <li><strong>Gaming:</strong> High-performance drivers are required for gaming to ensure smooth rendering and responsiveness.</li>
+        <li><strong>Virtualization:</strong> Virtual machines use synthetic drivers to communicate with host hardware.</li>
+      </ul>
+
+      <h2>Best Practices</h2>
+      <ul>
+        <li>Always use official drivers from the hardware manufacturer's website.</li>
+        <li>Create a restore point before updating drivers.</li>
+        <li>Uninstall old or unused drivers to reduce conflicts.</li>
+        <li>Use driver updater tools cautiously—some may bundle unwanted software.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

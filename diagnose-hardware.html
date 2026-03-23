@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Diagnose Hardware Issues | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f7fd;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 42px;
+    }
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #005bea;
+    }
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #003366;
+      color: white;
+      margin-top: 4rem;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .hamburger {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: white;
+      }
+    }
+    .hamburger { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Diagnose Hardware Issues</h1>
+
+    <section data-aos="fade-up">
+      <h2>Overview</h2>
+      <p>Diagnosing hardware issues involves identifying, troubleshooting, and resolving physical problems in computer components. Understanding symptoms and using diagnostic tools are key to efficient repair and maintenance.</p>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Categories of Hardware Issues</h2>
+      <ul>
+        <li><strong>Power issues:</strong> No power, sudden shutdowns</li>
+        <li><strong>Display issues:</strong> No signal, flickering screen, artifacts</li>
+        <li><strong>Input/output device failures:</strong> Keyboard, mouse, USB devices not working</li>
+        <li><strong>Storage problems:</strong> Drive not detected, slow read/write, clicking sounds</li>
+        <li><strong>Memory errors:</strong> Blue screen, frequent crashes, system freezing</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Common Symptoms of Hardware Issues</h2>
+      <ul>
+        <li>Failure to boot or random shutdowns</li>
+        <li>Unusual noises (e.g., clicking from hard drives or fans)</li>
+        <li>Overheating and fan spinning loudly</li>
+        <li>Peripheral devices not recognized</li>
+        <li>Display issues or no signal</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Common Causes of Hardware Failure</h2>
+      <ul>
+        <li>Dust buildup and overheating</li>
+        <li>Electrical surges or unstable power supply</li>
+        <li>Component aging or wear and tear</li>
+        <li>Loose connections or poorly seated components</li>
+        <li>Physical damage (drops, spills, or shocks)</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Diagnostic Tools</h2>
+      <ul>
+        <li>BIOS/UEFI Hardware Monitor</li>
+        <li>Built-in diagnostics from manufacturers (e.g., Dell Diagnostics)</li>
+        <li>MemTest86 (RAM test)</li>
+        <li>CrystalDiskInfo or HDDScan for drive health</li>
+        <li>Multimeter for power checks</li>
+        <li>Task Manager and Device Manager for basic checks</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Troubleshooting Workflow</h2>
+      <ol>
+        <li>Gather details about the issue from the user</li>
+        <li>Check system logs and error messages</li>
+        <li>Inspect hardware visually for loose cables, dust, damage</li>
+        <li>Test using diagnostic tools</li>
+        <li>Isolate the faulty component through substitution or testing</li>
+        <li>Repair, replace, or reconfigure the component</li>
+        <li>Test the system after resolution</li>
+        <li>Document the process and solution</li>
+      </ol>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Preventive Measures</h2>
+      <ul>
+        <li>Clean the system regularly to prevent dust buildup</li>
+        <li>Use a UPS or surge protector to prevent electrical damage</li>
+        <li>Ensure good ventilation and airflow</li>
+        <li>Keep BIOS and firmware updated</li>
+        <li>Handle hardware with care and use anti-static wristbands</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up">
+      <h2>Documentation and Reporting</h2>
+      <p>Always document:</p>
+      <ul>
+        <li>The reported issue</li>
+        <li>The diagnostic steps performed</li>
+        <li>Findings and resolved actions</li>
+        <li>Time and parts used</li>
+      </ul>
+      <p>This helps with future diagnostics and tracking recurring problems.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

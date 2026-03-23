@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Operating System | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img { height: 42px; }
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover { color: #ffd966; }
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+      list-style-type: disc;
+    }
+
+    .content li {
+      margin-bottom: 1.2rem;
+    }
+
+    .content li img {
+      display: block;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Company Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Operating System</h1>
+    <div class="content">
+      <h2>What is an Operating System?</h2>
+      <p>
+        An <strong>Operating System (OS)</strong> is a software that acts as an intermediary between the computer hardware and the user. It allows users to interact with the hardware through a set of programs that manage hardware resources efficiently and securely.
+      </p>
+
+      <h2>Core Functions of an Operating System</h2>
+      <ul>
+        <li><strong>Process Management:</strong> Controls the execution of processes, including multitasking and scheduling.</li>
+        <li><strong>Memory Management:</strong> Keeps track of each byte in a computer’s memory and allocates memory when needed.</li>
+        <li><strong>File System Management:</strong> Organizes and controls reading, writing, and storage of files.</li>
+        <li><strong>Device Management:</strong> Manages input/output devices through drivers.</li>
+        <li><strong>Security:</strong> Protects data and resources from unauthorized access and threats.</li>
+        <li><strong>User Interface:</strong> Offers GUI or CLI for user interaction with the system.</li>
+        <li><strong>Networking:</strong> Supports communication and sharing between devices over networks.</li>
+        <li><strong>Virtualization:</strong> Allows multiple virtual machines to run on a single physical system.</li>
+      </ul>
+
+      <h2>Types of Operating Systems</h2>
+      <ul>
+        <li><strong>Batch OS:</strong> Executes batches of jobs with minimal user interaction (e.g., early IBM systems).</li>
+        <li><strong>Time-Sharing OS:</strong> Allows multiple users to share system resources simultaneously.</li>
+        <li><strong>Distributed OS:</strong> Manages a group of independent computers and makes them appear as a single system.</li>
+        <li><strong>Real-Time OS:</strong> Used for systems with strict time requirements, such as in robotics or aerospace.</li>
+        <li><strong>Mobile OS:</strong> Designed for smartphones and tablets (e.g., Android, iOS).</li>
+      </ul>
+
+      <h2>Popular Operating Systems</h2>
+      <ul>
+        <li>
+          <img src="images/micro.jpg" alt="Windows OS" width="150" height="150">
+          <strong>Microsoft Windows:</strong> The most widely used OS for personal and business computers.
+        </li>
+        <li>
+          <img src="images/mac.jpg" alt="macOS" width="150" height="150">
+          <strong>macOS:</strong> Apple's desktop OS known for sleek design and security.
+        </li>
+        <li>
+          <img src="images/linux.jpg" alt="Linux OS" width="150" height="150">
+          <strong>Linux:</strong> Open-source OS used in servers, embedded systems, and development environments.
+        </li>
+        <li>
+          <img src="images/anio.jpg" alt="Android and iOS" width="150" height="150">
+          <strong>Android & iOS:</strong> Mobile OSes powering billions of smartphones and tablets worldwide.
+        </li>
+        <li>
+          <img src="images/ubuntu.jpg" alt="Ubuntu OS" width="150" height="150">
+          <strong>Ubuntu:</strong> A user-friendly Linux distribution ideal for beginners and students.
+        </li>
+      </ul>
+
+      <h2>History and Evolution</h2>
+      <p>
+        The first OS were developed in the 1950s for mainframe computers. By the 1980s, graphical interfaces like Apple's System 1 and Windows 1.0 revolutionized user interaction. In the 1990s, Linux emerged as a powerful open-source alternative. Today, operating systems are found in almost every device, from smartwatches to web servers.
+      </p>
+
+      <h2>Real-World Applications</h2>
+      <ul>
+        <li><strong>Business:</strong> Windows and Linux used in office networks, data centers, and workstations.</li>
+        <li><strong>Education:</strong> Chromebooks and Linux systems help deliver low-cost learning environments.</li>
+        <li><strong>Embedded Systems:</strong> Real-time OS in ATMs, self-driving cars, industrial robots.</li>
+        <li><strong>Cloud Computing:</strong> OS like Linux power major platforms like AWS, Azure, and Google Cloud.</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelector('.nav-links').classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>

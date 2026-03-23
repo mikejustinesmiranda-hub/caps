@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create and Manage Users & Permissions | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul, .card h4 {
+      line-height: 1.6;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Create and Manage Users</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>Objective</h3>
+    <p>Learn how to create, configure, and manage user accounts in a networked environment. Managing users ensures secure access, maintains proper permissions, and supports organizational policies.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Step 1: Access User Management Console</h3>
+    <ul>
+      <li><strong>Windows:</strong> Open <em>Computer Management</em> → Local Users and Groups.</li>
+      <li><strong>Linux:</strong> Use terminal commands like <code>adduser</code> or <code>usermod</code>.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Step 2: Create New User Accounts</h3>
+    <ul>
+      <li>Enter a unique username.</li>
+      <li>Set an initial password and enforce password policies (length, complexity).</li>
+      <li>Define the home directory and shell (for Linux).</li>
+      <li>Set account expiration or disable after inactivity (optional).</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Step 3: Assign User Roles and Groups</h3>
+    <ul>
+      <li>Group membership defines what resources users can access.</li>
+      <li><strong>Windows:</strong> Add users to groups like <em>Administrators</em>, <em>Users</em>, or custom roles.</li>
+      <li><strong>Linux:</strong> Use <code>usermod -aG groupname username</code> to assign groups.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Step 4: Assign Permissions and Policies</h3>
+    <p>Permissions and policies control what users can access and how they can interact with resources. Assigning them correctly is essential for both security and functionality.</p>
+
+    <h4>File and Folder Permissions</h4>
+    <ul>
+      <li><strong>Windows:</strong> Use NTFS permissions in folder properties (Right-click → Properties → Security tab).</li>
+      <li><strong>Linux:</strong> Use commands like <code>chmod</code>, <code>chown</code>, and <code>setfacl</code> to set read, write, and execute rights.</li>
+      <li>Apply the <strong>Principle of Least Privilege</strong> — give users only the access they need.</li>
+      <li>Test user access by logging in or simulating access using admin tools.</li>
+    </ul>
+
+    <h4>Group Policies (Windows Domain Environments)</h4>
+    <ul>
+      <li>Group Policies (GPOs) are rules applied to users or computers in Active Directory environments.</li>
+      <li>Used to enforce security settings, software restrictions, desktop environments, and more.</li>
+      <li>Edit policies using the <code>Group Policy Management Console (GPMC)</code>.</li>
+      <li>Common GPO examples:
+        <ul>
+          <li>Force password complexity and expiration</li>
+          <li>Restrict Control Panel access</li>
+          <li>Map network drives or printers automatically</li>
+          <li>Deploy software installations</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>Policy Best Practices</h4>
+    <ul>
+      <li>Use naming conventions and document each policy’s purpose.</li>
+      <li>Use security groups to apply policies efficiently across users.</li>
+      <li>Test policies in a staging environment before live deployment.</li>
+      <li>Regularly review and audit existing permissions and GPOs.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Step 5: Test and Verify</h3>
+    <ul>
+      <li>Log in as the new user or simulate their access with admin tools.</li>
+      <li>Check if permissions are working as intended.</li>
+      <li>Adjust group membership or access settings if issues are found.</li>
+    </ul>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <h3>Best Practices</h3>
+    <ul>
+      <li>Use strong password policies and enable password expiration.</li>
+      <li>Review user accounts regularly and remove unused ones.</li>
+      <li>Enable logging and auditing of login events and access activity.</li>
+      <li>Avoid using shared user accounts — each user should have their own login.</li>
+      <li>Document user roles and access permissions for reference and compliance.</li>
+    </ul>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

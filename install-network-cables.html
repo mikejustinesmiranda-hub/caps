@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Install Network Cables | IC-iT Portal</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f6ff;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul, .card ol {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    .button {
+      display: inline-block;
+      background-color: #005bea;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #0047c0;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Install Network Cables</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>Understanding Network Cables</h3>
+    <p>Network cables are physical media used to connect devices within a local area network (LAN). The most common types include:</p>
+    <ul>
+      <li><strong>Cat5e (Category 5e)</strong> – Supports speeds up to 1 Gbps, ideal for home and small office setups.</li>
+      <li><strong>Cat6</strong> – Improved shielding, supports speeds up to 10 Gbps for short distances (up to 55 meters).</li>
+      <li><strong>Fiber Optic</strong> – Uses light signals for extremely fast and long-distance data transmission, commonly used in backbone infrastructure.</li>
+    </ul>
+    <p>Choosing the right cable depends on distance, required speed, and budget. Copper cables (Cat5e, Cat6) are easier to install, while fiber offers better performance for larger networks.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Required Tools and Materials</h3>
+    <p>To successfully install network cables, prepare the following:</p>
+    <ul>
+      <li>Twisted pair cable (Cat5e, Cat6, or fiber optic)</li>
+      <li>RJ45 connectors (for copper Ethernet cables)</li>
+      <li>Crimping tool</li>
+      <li>Cable stripper and cutter</li>
+      <li>Cable tester or continuity tester</li>
+      <li>Punch-down tool (for patch panels or keystone jacks)</li>
+      <li>Labeling tape or markers</li>
+      <li>Velcro straps or cable ties for cable management</li>
+    </ul>
+    <p>Ensure all tools are tested and in good working condition before starting installation.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Steps to Install</h3>
+    <p>Follow these steps to install and terminate network cables properly:</p>
+    <ol>
+      <li><strong>Plan the layout:</strong> Identify locations for endpoints, switches, and routers. Create a cable map or diagram.</li>
+      <li><strong>Measure and cut:</strong> Measure cable lengths with extra slack for future adjustments.</li>
+      <li><strong>Strip and prepare:</strong> Use a cable stripper to remove about 1 inch of the outer sheath. Untwist pairs carefully to avoid signal interference.</li>
+      <li><strong>Crimp connectors:</strong> Align the wires using the T568B or T568A wiring standard. Insert into RJ45 connectors and use a crimping tool to secure.</li>
+      <li><strong>Test connections:</strong> Use a cable tester to check continuity and correct pin assignments.</li>
+      <li><strong>Label and organize:</strong> Label both ends of each cable. Use cable ties or organizers to keep installations clean and accessible.</li>
+    </ol>
+    <p>Proper cable management and labeling are critical for future maintenance and troubleshooting.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Safety and Best Practices</h3>
+    <p>When working with network cables, safety and consistency are essential:</p>
+    <ul>
+      <li>Never install cables in areas where they may be pinched or damaged.</li>
+      <li>Avoid running network cables parallel to electrical cables to prevent interference.</li>
+      <li>Use plenum-rated cables in ceiling spaces for fire safety, if required by code.</li>
+      <li>Follow ANSI/TIA/EIA-568 standards for wiring and layout.</li>
+      <li>Bundle and secure cables neatly to prevent tripping and damage.</li>
+    </ul>
+    <p>Consistency in using color codes and wiring schemes ensures easier maintenance and troubleshooting.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

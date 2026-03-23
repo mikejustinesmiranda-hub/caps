@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Maintenance Plan | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f6ff;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p, .card ul {
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h2>Create Maintenance Plan</h2>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Purpose</h3>
+      <p>Creating a maintenance plan helps ensure that computers and network systems remain secure, up-to-date, and in good working condition. A solid plan minimizes downtime and supports the long-term performance of IT infrastructure.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Types of Maintenance</h3>
+      <p><strong>Preventive Maintenance:</strong> Performed regularly to reduce the chance of failure (e.g., software updates, hardware cleaning).</p>
+      <p><strong>Corrective Maintenance:</strong> Fixes problems after they occur, such as replacing faulty components or removing malware.</p>
+      <p><strong>Adaptive Maintenance:</strong> Involves modifying systems to adapt to changes in environment or technology (e.g., new OS requirements).</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Steps to Create a Maintenance Plan</h3>
+      <p><strong>1. Inventory and Assessment:</strong> List all hardware and software assets. Determine their current condition, usage, and maintenance needs.</p>
+      <p><strong>2. Schedule Regular Tasks:</strong> Set dates and frequencies for tasks like software updates, hardware checks, disk cleanups, backups, and antivirus scans.</p>
+      <p><strong>3. Assign Responsibilities:</strong> Identify who will perform specific tasks (e.g., IT staff or end users).</p>
+      <p><strong>4. Document Procedures:</strong> Write clear instructions for each task so anyone can perform them correctly and consistently.</p>
+      <p><strong>5. Monitor and Revise:</strong> Track task completion and effectiveness. Update the plan as systems change or new issues arise.</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Common Tools Used</h3>
+      <p>Here are some tools frequently used in maintenance tasks:</p>
+      <ul>
+        <li>Disk Cleanup and Defragmenter</li>
+        <li>Antivirus and Antimalware Software</li>
+        <li>Backup Software (e.g., Acronis, Windows Backup)</li>
+        <li>Task Scheduler</li>
+        <li>System Monitoring Tools (e.g., HWMonitor, Speccy)</li>
+        <li>Patch Management Tools (e.g., WSUS, PDQ Deploy)</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Best Practices</h3>
+      <ul>
+        <li>Use detailed maintenance logs to track what was done and when.</li>
+        <li>Automate routine tasks where possible (e.g., updates, scans).</li>
+        <li>Test system backups periodically to ensure they can be restored.</li>
+        <li>Communicate planned maintenance schedules with users in advance.</li>
+        <li>Always perform backups before major updates or changes.</li>
+      </ul>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <h3>Benefits of a Maintenance Plan</h3>
+      <ul>
+        <li>Reduces system failures and downtime</li>
+        <li>Improves security and performance</li>
+        <li>Extends hardware and software lifespan</li>
+        <li>Ensures compliance with IT policies and standards</li>
+        <li>Makes troubleshooting and audits easier</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Network Topologies | IC-iT Portal</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p {
+      line-height: 1.6;
+    }
+
+    .topology-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">
+    <img src="images/background.png" alt="IC-iT Logo">
+    <span>IC-iT</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="activities.html">Lessons</a></li>
+    <li><a href="workbooks.html">Workbook</a></li>
+    <li><a href="feedback.html">Feedback</a></li>
+    <li><a href="about-us.html">About Us</a></li>
+  </ul>
+  <div class="hamburger">&#9776;</div>
+</nav>
+
+<main>
+  <h2 data-aos="fade-down">Network Topologies</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>What is a Network Topology?</h3>
+    <p>A network topology is the physical or logical arrangement of devices in a computer network. It defines how computers, devices, and cables are connected and interact with each other.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Bus Topology</h3>
+    <p>In a bus topology, all devices are connected to a single central cable. It's easy to install but can be difficult to troubleshoot. If the main cable fails, the entire network is affected.</p>
+    <img src="images/bus.jpg" alt="Bus Topology Diagram" class="topology-image">
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Star Topology</h3>
+    <p>Each device is connected to a central hub or switch. It’s the most common topology in LANs. If one cable fails, only that device is affected. However, if the hub fails, the entire network goes down.</p>
+    <img src="images/star.jpg" alt="Star Topology Diagram" class="topology-image">
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Ring Topology</h3>
+    <p>Devices are connected in a circular manner. Data travels in one direction until it reaches its destination. It's easy to identify faults but if one device fails, it can disrupt the entire network unless it's a dual ring.</p>
+    <img src="images/ring.jpg" alt="Ring Topology Diagram" class="topology-image">
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Mesh Topology</h3>
+    <p>Every device is connected to every other device. It provides high redundancy and reliability, making it ideal for critical systems, but it's expensive and complex to set up and manage.</p>
+    <img src="images/mesh.jpg" alt="Mesh Topology Diagram" class="topology-image">
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Hybrid Topology</h3>
+    <p>A combination of two or more topologies, such as star-bus or star-ring. It leverages the benefits of multiple structures but may involve higher costs and more complex setups.</p>
+    <img src="images/hybrid.jpg" alt="Hybrid Topology Diagram" class="topology-image">
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <h3>Choosing the Right Topology</h3>
+    <p>Factors to consider include network size, budget, scalability, fault tolerance, and performance needs. For home and small businesses, star topologies are commonly used due to their simplicity and reliability.</p>
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

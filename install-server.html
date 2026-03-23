@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Install Server Operating System | IC-iT Portal</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f6ff;
+      color: #333;
+      scroll-behavior: smooth;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: #003366;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .card h3 {
+      color: #005bea;
+      margin-top: 0;
+    }
+
+    .card p {
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      background: #003366;
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+<main>
+  <h2 data-aos="fade-down">Install Server Operating System</h2>
+
+  <div class="card" data-aos="fade-up">
+    <h3>Select Server OS</h3>
+    <p>Choose an appropriate server OS based on the organization's needs, such as Windows Server, Ubuntu Server, or CentOS. Consider factors like compatibility, support, and licensing.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="100">
+    <h3>Understand System Requirements</h3>
+    <p>Review the minimum and recommended hardware requirements for the OS. Verify CPU architecture, RAM, disk space, and network compatibility before installation.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="150">
+    <h3>Create Bootable Media</h3>
+    <p>Prepare a bootable USB drive or DVD with the server OS image. Use tools like Rufus (Windows) or Etcher (cross-platform) to write the ISO to the device.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <h3>Configure BIOS/UEFI</h3>
+    <p>Access BIOS/UEFI settings and set the boot priority to boot from your installation media. Ensure virtualization and other hardware options are enabled if needed.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="250">
+    <h3>Choose Installation Type</h3>
+    <p>Decide whether to perform a fresh install, upgrade an existing installation, or deploy a custom image. Clean installs are recommended for new deployments.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="300">
+    <h3>Begin Installation</h3>
+    <p>Start the installation process and follow the setup wizard. Configure disk partitions, language preferences, administrator accounts, and server roles as needed.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="350">
+    <h3>Partitioning Disks Effectively</h3>
+    <p>Partition your hard drives for optimal performance and organization. Use separate partitions for OS, applications, and data. Consider LVM or RAID if needed.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <h3>Post-Installation Setup</h3>
+    <p>Once the OS is installed, update the system, install necessary drivers, configure networking, and apply security settings. Set up remote access if required.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="450">
+    <h3>Verify Installation & Test Services</h3>
+    <p>Ensure the system boots properly. Test server roles like DNS, DHCP, or file sharing. Monitor system logs for errors and confirm that services are running correctly.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up" data-aos-delay="500">
+    <h3>Documentation and Configuration Backup</h3>
+    <p>Document system settings, IP addresses, login credentials, and installed services. Create a backup of the initial configuration for disaster recovery or replication.</p>
+  </div>
+</main>
+
+
+<footer>
+  <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</body>
+</html>

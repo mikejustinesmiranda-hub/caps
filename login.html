@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSERT YOUR ID NUMBER</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 400px; margin: 50px auto; padding: 20px; text-align: center; }
+        input { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        button { background: #28a745; color: white; padding: 12px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 14px; margin: 5px; }
+        button:hover { opacity: 0.9; }
+        .signin-btn { background: #007bff; }
+        .signout-btn { background: #dc3545; }
+        .hidden { display: none; }
+        #status { margin-top: 20px; font-weight: bold; }
+        .button-group { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+        .id-list { margin-top: 20px; text-align: left; max-height: 200px; overflow-y: auto; }
+        .id-item { background: #f8f9fa; padding: 8px; margin: 5px 0; border-radius: 4px; border-left: 4px solid #007bff; }
+    </style>
+</head>
+<body>
+    <h1>🔐 ID NUMBER SYSTEM</h1>
+    
+    <!-- Main Form -->
+    <div id="mainForm">
+        <input type="text" id="idNumber" placeholder="ID NUMBER" required>
+        <div class="button-group">
+            <button onclick="addIdNumber()" class="add-btn">➕ ADD ID NUMBER</button>
+            <button onclick="signIn()" class="signin-btn">🔑 SIGN IN</button>
+            <button onclick="signOut()" id="signOutBtn" class="signout-btn hidden">🚪 SIGN OUT</button>
+        </div>
+    </div>
+    
+    <!-- Saved IDs List -->
+    <div id="idList" class="hidden">
+        <h3>Saved IDs:</h3>
+        <div id="idContainer" class="id-list"></div>
+    </div>
+    
+    <!-- Logged In Section -->
+    <div id="loggedIn" class="hidden">
+        <h2>✅ Access Granted!</h2>
+        <p><strong>Current ID:</strong> <span id="userDisplay"></span></p>
+        <button onclick="signOut()" class="signout-btn">🚪 SIGN OUT</button>
+    </div>
+    
+    <div id="status"></div>
+
+    <script>
+        let savedIds = JSON.parse(localStorage.getItem('savedIds')) || [];
+
+        // Load saved IDs on start
+        displaySavedIds();
+        if (localStorage.getItem('loggedIn')) {
+            showLoggedIn();
+        }
+
+        function addIdNumber() {
+            const idNumber = document.getElementById('idNumber').value.trim();
+            
+            if (idNumber) {
+                if (!savedIds.includes(idNumber)) {
+                    savedIds.push(idNumber);
+                    localStorage.setItem('savedIds', JSON.stringify(savedIds));
+                    displaySavedIds();
+                    showStatus('ID added successfully! ✅');
+                    document.getElementById('idNumber').value = '';
+                    document.getElementById('idList').classList.remove('hidden');
+                } else {
+                    showStatus('ID already exists!', 'error');
+                }
+            } else {
+                showStatus('Enter ID Number!', 'error');
+            }
+        }
+
+        function signIn() {
+            const idNumber = document.getElementById('idNumber').value.trim();
+            
+            if (savedIds.includes(idNumber)) {
+                localStorage.setItem('currentId', idNumber);
+                localStorage.setItem('loggedIn', 'true');
+                showLoggedIn();
+                showStatus(`Welcome ${idNumber}! ✅`);
+                document.getElementById('idNumber').value = '';
+            } else {
+                showStatus('ID not found! Add it first.', 'error');
+            }
+        }
+
+        function signOut() {
+            localStorage.removeItem('currentId');
+            localStorage.removeItem('loggedIn');
+            document.getElementById('mainForm').classList.remove('hidden');
+            document.getElementById('loggedIn').classList.add('hidden');
+            document.getElementById('signOutBtn').classList.add('hidden');
+            document.getElementById('idNumber').value = '';
+            showStatus('Signed out! 👋');
+        }
+
+        function showLoggedIn() {
+            document.getElementById('mainForm').classList.remove('hidden');
+            document.getElementById('loggedIn').classList.remove('hidden');
+            document.getElementById('signOutBtn').classList.remove('hidden');
+            document.getElementById('userDisplay').textContent = localStorage.getItem('currentId');
+        }
+
+        function displaySavedIds() {
+            const container = document.getElementById('idContainer');
+            if (savedIds.length === 0) {
+                container.innerHTML = '<p style="color: #666;">No IDs saved yet...</p>';
+                return;
+            }
+            container.innerHTML = savedIds.map(id => `<div class="id-item">📝 ${id}</div>`).join('');
+        }
+
+        function showStatus(message, type = 'success') {
+            const status = document.getElementById('status');
+            status.textContent = message;
+            status.style.color = type === 'error' ? 'red' : 'green';
+            setTimeout(() => { status.textContent = ''; }, 3000);
+        }
+    </script>
+</body>
+</html>

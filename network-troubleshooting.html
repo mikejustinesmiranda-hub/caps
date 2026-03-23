@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Network Troubleshooting | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to left, #000000, #d4d4e3, #0081ea);
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.2rem;
+      color: #003366;
+      margin-bottom: 2rem;
+    }
+
+    section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #005bea;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    ul, ol {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    ul li, ol li {
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #003366;
+      color: white;
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #003366;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    .hamburger { display: none; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1 data-aos="fade-up">Network Troubleshooting</h1>
+
+    <section data-aos="fade-up">
+      <h2>Overview</h2>
+      <p>Network troubleshooting involves identifying, analyzing, and resolving problems affecting the operation of a network. This includes both hardware and software issues that interrupt communication between devices.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="100">
+      <h2>Common Network Problems</h2>
+      <ul>
+        <li>Slow or dropped connections</li>
+        <li>IP conflicts or misconfigurations</li>
+        <li>DNS resolution failures</li>
+        <li>Hardware failures (routers, switches, cables)</li>
+        <li>Firewall or security restrictions</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="200">
+      <h2>Basic Troubleshooting Tools</h2>
+      <ul>
+        <li><strong>Ping:</strong> Checks if a device is reachable</li>
+        <li><strong>Tracert:</strong> Identifies the route data takes</li>
+        <li><strong>IPConfig:</strong> Displays current IP and connection settings</li>
+        <li><strong>NSLookup:</strong> Verifies DNS resolution</li>
+        <li><strong>Wireshark:</strong> Captures and analyzes network packets</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="300">
+      <h2>Step-by-Step Troubleshooting Process</h2>
+      <ol>
+        <li>Identify the scope of the issue (device or network-wide)</li>
+        <li>Check physical connections and indicator lights</li>
+        <li>Use ping or ipconfig to identify connectivity problems</li>
+        <li>Restart network devices (router, switch, etc.)</li>
+        <li>Review firewall settings and update firmware if needed</li>
+        <li>Escalate or document the issue for further resolution</li>
+      </ol>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="400">
+      <h2>Preventive Measures</h2>
+      <ul>
+        <li>Regularly update firmware and software</li>
+        <li>Use quality cables and properly configured hardware</li>
+        <li>Back up configurations</li>
+        <li>Educate users on safe network practices</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="500">
+      <h2>Advanced Troubleshooting Techniques</h2>
+      <ul>
+        <li><strong>Loopback Testing:</strong> Use loopback addresses to verify TCP/IP stack function</li>
+        <li><strong>Port Scanning:</strong> Detect open or blocked ports using tools like Nmap</li>
+        <li><strong>Packet Sniffing:</strong> Use Wireshark to trace data and detect security issues</li>
+        <li><strong>Syslog/Event Logs:</strong> Analyze device logs for errors and alerts</li>
+        <li><strong>VLAN Configuration:</strong> Ensure proper device grouping and segmentation</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="600">
+      <h2>Troubleshooting Scenarios</h2>
+      <p>Real-world examples of common issues and how to solve them:</p>
+      <ul>
+        <li><strong>Scenario 1:</strong> A user can't connect to the internet. <em>Solution:</em> Check IP settings, run <code>ipconfig /renew</code>, and verify DNS.</li>
+        <li><strong>Scenario 2:</strong> Network-wide slowness. <em>Solution:</em> Analyze bandwidth usage, reboot router, check for malware.</li>
+        <li><strong>Scenario 3:</strong> Devices not visible to each other. <em>Solution:</em> Ensure same subnet and network discovery is enabled.</li>
+        <li><strong>Scenario 4:</strong> Intermittent drops. <em>Solution:</em> Replace cables and update NIC drivers.</li>
+      </ul>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="700">
+      <h2>Documentation and Reporting</h2>
+      <p>Proper documentation streamlines support and avoids repeat issues:</p>
+      <ul>
+        <li>Record the problem, actions taken, and resolution</li>
+        <li>Include logs, screenshots, and timestamps</li>
+        <li>Use ticketing or issue tracking systems</li>
+        <li>Update network documentation when changes occur</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

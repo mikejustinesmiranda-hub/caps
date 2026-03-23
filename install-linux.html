@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Install Linux OS | IC-iT</title>
+  <link rel="icon" href="images/background.png" type="image/png">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to left,#000000,#d4d4e3 ,#0081ea);
+      color: #333;
+    }
+
+    .navbar {
+      background: linear-gradient(to right, #030303, #005bea);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 42px;
+    }
+
+    .logo span {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }  
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: #ffd966;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #003366;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .content {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      line-height: 1.7;
+      animation: fadeIn 0.6s ease;
+    }
+
+    .content h2 {
+      color: #005bea;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .content ul {
+      padding-left: 1.2rem;
+      margin-top: 1rem;
+    }
+
+    .content li {
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      background: #003366;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #003366;
+        width: 100%;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/background.png" alt="IC-iT Logo">
+      <span>IC-iT</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="activities.html">Lessons</a></li>
+      <li><a href="workbooks.html">Workbook</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <main>
+    <h1>Install Linux OS</h1>
+    <div class="content">
+      <h2>Introduction</h2>
+      <p>
+        Installing Linux OS can be a great way to explore open-source software, and it can be done through various methods depending on your hardware and preferences. This guide will help you through the process of installing Linux on your computer.
+      </p>
+
+      <h2>Why Choose Linux?</h2>
+      <ul>
+        <li><strong>Free and Open Source:</strong> Most Linux distributions are completely free and open to modify.</li>
+        <li><strong>Security:</strong> Linux is known for its strong security model and low susceptibility to viruses.</li>
+        <li><strong>Performance:</strong> Lightweight distributions can run well on older hardware.</li>
+        <li><strong>Customizability:</strong> Users have complete control over their environment and software stack.</li>
+        <li><strong>Community Support:</strong> Large user communities provide forums, guides, and help.</li>
+      </ul>
+
+      <h2>Popular Linux Distributions</h2>
+      <ul>
+        <li><strong>Ubuntu:</strong> User-friendly and widely used; ideal for beginners.</li>
+        <li><strong>Fedora:</strong> Cutting-edge features; good for developers and enterprise use.</li>
+        <li><strong>Debian:</strong> Very stable and community-driven; ideal for servers.</li>
+        <li><strong>Linux Mint:</strong> Great for users switching from Windows due to its similar interface.</li>
+        <li><strong>Arch Linux:</strong> Highly customizable but suited for advanced users.</li>
+      </ul>
+
+      <h2>Steps to Install Linux OS</h2>
+      <ul>
+        <li><strong>Step 1 - Choose a Linux Distribution:</strong> Pick a distro based on your needs and hardware capabilities.</li>
+        <li><strong>Step 2 - Create a Bootable USB:</strong> Use tools like Rufus, Etcher, or UNetbootin to write the ISO to a USB.</li>
+        <li><strong>Step 3 - Boot from USB:</strong> Access BIOS/UEFI and set the USB as the first boot device.</li>
+        <li><strong>Step 4 - Select Installation Language:</strong> Choose your language and keyboard layout when the installer loads.</li>
+        <li><strong>Step 5 - Partition the Disk:</strong> Choose to install alongside existing OS or erase the disk completely.</li>
+        <li><strong>Step 6 - Install the OS:</strong> Proceed with the guided steps to install Linux and configure user settings.</li>
+        <li><strong>Step 7 - Reboot and Update:</strong> Restart your system and run the package manager to install updates.</li>
+      </ul>
+
+      <h2>Post-Installation Tasks</h2>
+      <ul>
+        <li><strong>Install Essential Software:</strong> Add browsers, office suites, media players, etc.</li>
+        <li><strong>Update Your System:</strong> Use commands like <code>sudo apt update && sudo apt upgrade</code> in Ubuntu/Debian.</li>
+        <li><strong>Install Drivers:</strong> Use the "Additional Drivers" tool or manually install proprietary drivers if needed.</li>
+        <li><strong>Explore the Desktop Environment:</strong> Learn how to use GNOME, KDE, XFCE, etc.</li>
+        <li><strong>Customize the System:</strong> Change themes, keybindings, and install useful extensions.</li>
+      </ul>
+
+      <h2>Additional Tips</h2>
+      <ul>
+        <li><strong>Backup Data:</strong> Always back up files before making system changes.</li>
+        <li><strong>Try Before Installing:</strong> Use the "Live" session to test the system without installing.</li>
+        <li><strong>Use a VM First:</strong> Try Linux on a virtual machine using VirtualBox or VMware if you're not ready to install directly.</li>
+      </ul>
+
+      <h2>Common Issues</h2>
+      <ul>
+        <li><strong>USB Not Booting:</strong> Recheck boot order and ensure the ISO was correctly written.</li>
+        <li><strong>Partitioning Problems:</strong> Use guided options or seek help if unsure—avoid data loss!</li>
+        <li><strong>Driver Issues:</strong> Some Wi-Fi or graphics cards may require proprietary drivers.</li>
+        <li><strong>UEFI vs Legacy:</strong> Be sure your USB matches your BIOS settings (UEFI or Legacy Boot).</li>
+      </ul>
+
+      <h2>Summary</h2>
+      <p>
+        Installing Linux gives you full control over your computing experience, from performance to aesthetics. With many distributions available, helpful communities, and open-source freedom, it's easier than ever to make the switch.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 IC-iT. Pamilyang Sy.</p>
+  </footer>
+
+  <script>
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('active');
+    });
+  </script>
+</body>
+</html>

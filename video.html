@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IC-iT | Video Tutorial</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: linear-gradient(to right, #000000, #1e3a8a);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 20px;
+      background: rgba(0,0,0,0.7);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .back-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: #00c6ff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    .back-btn:hover {
+      background: #0072ff;
+      transform: scale(1.05);
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .video-box {
+      max-width: 900px;
+      margin: auto;
+      background: rgba(0,0,0,0.5);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    video {
+      width: 100%;
+      height: 500px;
+      border-radius: 10px;
+      margin-top: 20px;
+      background: black;
+    }
+  </style>
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">⬅ Back</a>
+
+<header>
+  🎥 IC-iT Video Tutorial Page
+</header>
+
+<div class="container">
+
+  <div class="video-box">
+    <h2>Lesson Videos</h2>
+
+    <!-- 🎬 VIDEO 1 -->
+    <h3>Lesson 1 (coc3)</h3>
+    <video controls>
+      <source src="coc3.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- 🎬 VIDEO 2 -->
+    <h3>Lesson 2 (coc4)</h3>
+    <video controls>
+      <source src="coc4.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <p>You can update videos anytime in your project folder.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
